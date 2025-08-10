@@ -1,4 +1,5 @@
 import requests
+import json
 
 # url = "https://api.github.com/users/shakeelsaga"
 
@@ -7,9 +8,13 @@ import requests
 
 # username = r['login']
 
-req = requests.post("https://httpbin.org/post", params = {"this": "that"}, data = {"shakeel": "saga"})
+# req = requests.post("https://httpbin.org/post", params = {"this": "that"}, data = {"shakeel": "saga"})
 
-print(req.text)
+# print(req.text)
 
 # with open("index.html", 'w') as file:
 #     file.write(req.text)
+
+r = requests.get("https://youtu.be/phLb8LDDE3k?si=B_azjaVsER8199XH")
+heads = r.headers
+print(json.dumps(dict(heads), indent = 2))
